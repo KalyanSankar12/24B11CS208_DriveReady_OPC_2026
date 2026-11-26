@@ -340,46 +340,29 @@ tool     hours tool  tool
  Agent responds to customer
 ```
 
-For an order, the saving step should happen only after the customer
-confirms.
-
-------------------------------------------------------------------------
-
 ## 7. Common problems and solutions
 
 ### Problem: `Secret not found: GROQ_API_KEY`
-
 **Solution:** Add `GROQ_API_KEY` under Google Colab's Secrets panel and
 enable notebook access.
-
 ### Problem: Google authentication does not work
-
 **Solution:** Run the authentication cell again and complete the Google
 sign-in/permission steps.
-
 ### Problem: A new spreadsheet is created every time
-
 **Solution:** Use `gc.open("Smart Mobile Store Orders")` to open the
 existing spreadsheet instead of calling `gc.create(...)` again.
-
 ### Problem: `NameError: name 'get_price' is not defined`
-
 **Solution:** Run the cell that defines the tools before running the
 agent cell.
-
 ### Problem: The order is not appearing in Google Sheets
-
 **Solution:** 1. Check that the correct spreadsheet is open. 2. Check
 that all required order details were provided. 3. Check that you
 explicitly confirmed the order. 4. Check the Colab output for an error.
-
 ### Problem: The agent gives an unexpected response
-
 **Solution:** Read the full response, check the conversation history,
 and provide the missing or corrected information. If needed, restart the
 runtime and run the notebook cells in order. Be careful not to create a
 duplicate spreadsheet.
-
 ------------------------------------------------------------------------
 
 ## 8. Day 4 completion checklist
@@ -401,12 +384,9 @@ duplicate spreadsheet.
 ------------------------------------------------------------------------
 
 ## 9. Final outcome
-
 At the end of Day 4, you have a basic **tool-using AI order assistant**
 for Smart Mobile Store.
-
 It can answer store questions using Python tools and save confirmed
 customer orders in Google Sheets.
-
 **Main learning:** An LLM can understand a customer's request, while an
 agent can select and use tools to perform actions.
